@@ -21,7 +21,7 @@ Reporting and Analytics: Business users have access to comprehensive reports and
 Getting Started
 To get started with the JobCardTest Android application and htdocs Version 0.1 web platform, follow these steps:
 
-Clone the repository: git clone https://github.com/danyboy2018/JobCardSystem.git
+Clone the repository: git clone https://github.com/davidSh2023/JobCardSystem.git
 
 Import the Android project into Android Studio or your preferred development environment.
 
