@@ -1,0 +1,44 @@
+#box {
+    margin: auto;
+		box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+		border: 0.5px solid #1A1F24;
+		border-radius: 5px;
+	}
+
+.titleBox{
+    text-align: center;
+}
+
+#my_centered_buttons {
+	display: flex; justify-content: center;
+}
+
+#my_centered_text_select {
+	display: flex; justify-content:center;
+}
+
+.btn-sample {
+  color: #ffffff;
+  background-color: #635E4F;
+  border-color: #130269;
+}
+
+#my_centered_Dropdown_Checkbox {
+	display: flex; justify-content: center;
+}
+
+
+.multiselect-container div.checkbox {
+    margin: 0;
+}
+.multiselect-container label {
+    margin: 0;
+    white-space: nowrap;
+}
+.multiselect-container div.checkbox {
+    padding: 5px 15px 5px 35px;
+}
+
+#alert {
+  padding: 5px 1px 1px 1px;
+	}

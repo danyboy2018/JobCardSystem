@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.jobcard.david.jobcard.UserActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+
+        <ImageView
+            android:id="@+id/image_background_main_user"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType = "fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/background_main_user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layoutDirection = "ltr"
+                android:supportsRtl = "true"
+                tools:ignore="RtlEnabled">
+
+
+                <ImageView
+                    android:id="@+id/menu_user"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="0.2"
+                    android:onClick="click"
+                    android:src="@drawable/menu" />
+
+
+                <TextView
+                    android:id="@+id/TextView_menu_user"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_weight="1.6"
+                    android:gravity="center_horizontal"
+                    android:text="Your next JobCards shown below"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                 />
+
+                <ImageView
+                    android:id="@+id/dots_user"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="0.2"
+                    android:gravity="right"
+                    android:onClick="showMenu"
+                    android:src="@drawable/dots" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="Upcoming JobCards"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cardview_bg"
+                        android:orientation="horizontal"
+                        android:layoutDirection = "ltr">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="100dp"
+                            android:background="@color/colorGreen"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Performing jobcard on the part"
+                                android:textColor="@color/colorGray"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/gree_circle" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="CONFIRMED"
+                                    android:textColor="@color/colorGreen"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text1"
+                                android:layout_marginTop="3dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:src="@drawable/calendar" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="13/09 : 5:40 pm"
+                                    android:textColor="@color/colorLightGray"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+
+
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/linear"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:background="@drawable/roun_rect_lightgray"
+                                android:gravity="center"
+                                android:text="into"
+                                android:textColor="@color/colorGray"
+                                android:textSize="10sp"
+                                android:textStyle="bold"  />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="job"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="family"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="update"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cardview_bg"
+                        android:orientation="horizontal"
+                        android:layoutDirection = "ltr">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="100dp"
+                            android:background="@color/colorOrange"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/text11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Performing jobcard on the part"
+                                android:textColor="@color/colorGray"
+                                android:textSize="14dp"
+                                android:textStyle="bold"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:gravity="center_vertical">
+
+                                <View
+                                    android:layout_width="7dp"
+                                    android:layout_height="7dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/orange_circle" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="PENDING"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold"/>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linear1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text11"
+                                android:layout_marginTop="3dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="14dp"
+                                    android:layout_height="14dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:src="@drawable/calendar" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="13/09 : 5:40 pm"
+                                    android:textColor="@color/colorLightGray"
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+
+
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/linear1"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="into"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"  />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="job"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="family"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/roun_rect_lightgray"
+                                    android:gravity="center"
+                                    android:text="update"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

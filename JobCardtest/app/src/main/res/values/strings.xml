@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JobCard</string>
+    <string name="role_prompt">Choose a role</string>
+
+    <string-array name="role_arrays">
+        <item>Identification , Markings</item>
+        <item>Machining I</item>
+        <item>Bonding / Riveting / Brazing / Welding</item>
+        <item>Machining II / Finishing</item>
+        <item>Coating / Painting / Cleaning</item>
+        <item>Inserts</item>
+    </string-array>
+
+</resources>
